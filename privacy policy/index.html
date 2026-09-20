@@ -1,209 +1,226 @@
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        background-color: var(--bg-color);
-        color: var(--text-main);
-        line-height: 1.7;
-        padding: 2rem 1rem;
-    }
-
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-        background: var(--card-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 16px;
-        padding: 3rem 2.5rem;
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
-    }
-
-    header {
-        text-align: center;
-        margin-bottom: 2.5rem;
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid var(--border-color);
-    }
-
-    .logo-badge {
-        display: inline-block;
-        background: var(--accent-glow);
-        color: var(--primary);
-        font-weight: 600;
-        font-size: 0.85rem;
-        padding: 0.35rem 0.85rem;
-        border-radius: 50px;
-        margin-bottom: 1rem;
-        border: 1px solid rgba(99, 102, 241, 0.3);
-    }
-
-    h1 {
-        font-size: 2.25rem;
-        font-weight: 800;
-        letter-spacing: -0.025em;
-        margin-bottom: 0.5rem;
-        color: #ffffff;
-    }
-
-    .last-updated {
-        font-size: 0.9rem;
-        color: var(--text-muted);
-    }
-
-    h2 {
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: #ffffff;
-        margin-top: 2rem;
-        margin-bottom: 0.75rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    p {
-        color: var(--text-muted);
-        margin-bottom: 1rem;
-        font-size: 1rem;
-    }
-
-    ul {
-        margin-bottom: 1.25rem;
-        padding-left: 1.5rem;
-        color: var(--text-muted);
-    }
-
-    li {
-        margin-bottom: 0.5rem;
-    }
-
-    strong {
-        color: var(--text-main);
-    }
-
-    .highlight-box {
-        background: rgba(15, 23, 42, 0.6);
-        border-left: 4px solid var(--primary);
-        padding: 1.25rem;
-        border-radius: 0 8px 8px 0;
-        margin: 1.25rem 0;
-    }
-
-    .highlight-box p {
-        margin-bottom: 0;
-        color: var(--text-main);
-    }
-
-    .contact-card {
-        background: rgba(99, 102, 241, 0.05);
-        border: 1px solid rgba(99, 102, 241, 0.2);
-        border-radius: 12px;
-        padding: 1.5rem;
-        margin-top: 2rem;
-        text-align: center;
-    }
-
-    .contact-card h2 {
-        justify-content: center;
-        margin-top: 0;
-    }
-
-    .email-link {
-        color: var(--primary);
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.2s ease;
-    }
-
-    .email-link:hover {
-        color: var(--primary-hover);
-        text-decoration: underline;
-    }
-
-    footer {
-        text-align: center;
-        margin-top: 3rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid var(--border-color);
-        color: var(--text-muted);
-        font-size: 0.85rem;
-    }
-
-    @media (max-width: 640px) {
-        .container {
-            padding: 1.5rem 1rem;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - GalAI</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm 15mm;
+            background-color: #0d0f12;
+            @bottom-right {
+                content: "Page " counter(page) " of " counter(pages);
+                font-family: 'Helvetica Neue', Arial, sans-serif;
+                font-size: 8pt;
+                color: #4a5568;
+            }
+            @bottom-left {
+                content: "GalAI Gallery Manager - Privacy Policy";
+                font-family: 'Helvetica Neue', Arial, sans-serif;
+                font-size: 8pt;
+                color: #4a5568;
+            }
         }
-        h1 {
-            font-size: 1.75rem;
+
+        *, *::before, *::after {
+            box-sizing: border-box;
         }
-    }
-</style>
 
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-size: 10pt;
+            line-height: 1.6;
+            color: #cdd6f4;
+            background-color: #0d0f12;
+            margin: 0;
+            padding: 0;
+        }
 
-    <main>
-        <p><strong>GalAI: AI Gallery Manager</strong> is a mobile application developed by <strong>CubeChains</strong>. This Service is provided at no cost and is intended for use as is. This page informs users about our policies regarding the collection, use, and disclosure of information when using the GalAI application.</p>
-        <p>By using this Service, you agree to the terms described in this Privacy Policy.</p>
+        /* Full bleed header style via negative margins */
+        .header-banner {
+            margin: -20mm -15mm 25px -15mm;
+            padding: 30px 15mm;
+            background: linear-gradient(135deg, #1e1e2e 0%, #11111b 100%);
+            border-bottom: 3px solid #6366f1;
+            text-align: center;
+        }
 
-        <h2>1. Information Collection and Use</h2>
-        <p>GalAI includes offline AI-powered gallery management features, such as smart photo organization, image categorization, duplicate detection, and tagging. All AI processing and image analysis are performed <strong>locally on the user’s device</strong>.</p>
+        .header-banner h1 {
+            margin: 0;
+            font-size: 24pt;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
         
-        <div class="highlight-box">
-            <p><strong>Important Privacy Guarantee:</strong> We do NOT collect, store, transmit, or upload your photos, videos, album structures, or AI-generated gallery metadata to any external server. All user media remains entirely on your device.</p>
-        </div>
+        .header-banner h1 span {
+            color: #6366f1;
+        }
 
-        <p>GalAI does not require users to create an account. To deliver core functionality, the app accesses specific device data locally:</p>
+        .header-banner .subtitle {
+            margin-top: 5px;
+            font-size: 10pt;
+            color: #a6adc8;
+            letter-spacing: 0.5px;
+        }
+
+        .meta-box {
+            background-color: #181825;
+            border: 1px solid #313244;
+            border-radius: 6px;
+            padding: 12px 15px;
+            margin-bottom: 25px;
+            font-size: 9pt;
+            color: #bac2de;
+        }
+
+        .meta-box table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .meta-box td {
+            padding: 3px 0;
+        }
+
+        .meta-box td.label {
+            font-weight: bold;
+            color: #6366f1;
+            width: 120px;
+        }
+
+        h2 {
+            font-size: 13pt;
+            font-weight: 700;
+            color: #ffffff;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-left: 4px solid #6366f1;
+            padding-left: 10px;
+            page-break-after: avoid;
+        }
+
+        h3 {
+            font-size: 11pt;
+            font-weight: 600;
+            color: #f5e0dc;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            page-break-after: avoid;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        ul {
+            margin-top: 0;
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .highlight-box {
+            background-color: #1e1e2e;
+            border-left: 3px solid #b4befe;
+            padding: 12px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 9.5pt;
+        }
+
+        .highlight-box ul {
+            margin-bottom: 0;
+        }
+
+        .footer-note {
+            margin-top: 40px;
+            border-top: 1px solid #313244;
+            padding-top: 15px;
+            font-size: 8.5pt;
+            color: #7f849c;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-banner">
+        <h1><span>Gal</span>AI</h1>
+        <div class="subtitle">AI Gallery Manager Mobile Application Privacy Policy</div>
+    </div>
+
+    <div class="meta-box">
+        <table>
+            <tr>
+                <td class="label">Effective Date:</td>
+                <td>March 20, 2026</td>
+            </tr>
+            <tr>
+                <td class="label">Application:</td>
+                <td>GalAI: AI Gallery Manager</td>
+            </tr>
+            <tr>
+                <td class="label">Publisher:</td>
+                <td>CubeChains</td>
+            </tr>
+        </table>
+    </div>
+
+    <p>Welcome to <strong>GalAI: AI Gallery Manager</strong> ("we", "our", or "us"). We are fully committed to protecting your privacy and ensuring a transparent, secure environment for managing your personal photo gallery. This Privacy Policy details how your local media is accessed, the nature of our on-device intelligence processing, and third-party integrations utilized within GalAI.</p>
+    
+    <p>By downloading, installing, or interacting with GalAI, you explicitly consent to the data practices and localized processing methodologies outlined across this document.</p>
+
+    <h2>1. Information Handling & Local Processing</h2>
+    <p>GalAI functions entirely as an offline-first utility application. We prioritize strict data minimization—your personal photos and device media never leave your device.</p>
+    
+    <h3>A. On-Device AI & Gallery Operations</h3>
+    <p>GalAI features offline AI-powered gallery management, including smart photo organization, categorization, and duplicate detection. To provide these features, the app interacts with:</p>
+    <ul>
+        <li><strong>Device Photos and Media:</strong> Accessed strictly on your device local storage sandbox to enable automated sorting, cleanup, and indexing features.</li>
+        <li><strong>Local Metadata:</strong> File attributes and structural paths are read locally to categorize images efficiently.</li>
+        <li><strong>Offline Execution:</strong> All neural models and image analysis run <strong>locally on your device hardware</strong>. We do not upload, transmit, or back up any photos, videos, or album structures to any external cloud servers or remote databases.</li>
+    </ul>
+
+    <h3>B. Personal Information</h3>
+    <p>GalAI does not require user accounts, logins, or cloud synchronization profiles, and does not collect personally identifiable information such as your name, phone number, or precise location.</p>
+
+    <h2>2. Third-Party Services & Advertising</h2>
+    <p>To keep GalAI free to use, the application integrates trusted industry-standard third-party SDKs for distribution, basic diagnostics, and advertising monetization:</p>
+    
+    <div class="highlight-box">
+        <strong>Integrated Third-Party Partners:</strong>
         <ul>
-            <li><strong>Device Photos & Media:</strong> Accessed locally on your device to enable AI-driven gallery sorting, organization, cleanup, and management features.</li>
-            <li><strong>Metadata:</strong> Image metadata (such as timestamps or file paths) is read locally to group and sort your media files.</li>
+            <li><strong>Google Play Services & AdMob:</strong> Used for serving non-intrusive advertisements. AdMob evaluates anonymous device advertising identifiers to manage ad frequency and compliance.</li>
+            <li><strong>Unity Ads:</strong> May be utilized for promotional features or rewarded UI flows, handling device characteristics to render visual streams.</li>
         </ul>
-        <p>All media and information processed by GalAI remain <strong>strictly offline and locally on your device</strong>. This data is never transmitted to any external servers, cloud databases, or shared with any third parties by CubeChains.</p>
+    </div>
 
-        <h2>2. Third-Party Services</h2>
-        <p>The app may use trusted third-party services for essential functionality such as app distribution, advertisements, and performance monitoring. These services may collect limited information as governed by their own privacy policies.</p>
-        <p>Third-party services used by the app may include:</p>
-        <ul>
-            <li>Google Play Services</li>
-            <li>AdMob</li>
-            <li>Unity</li>
-        </ul>
-        <p>We encourage users to review the privacy policies of these third-party service providers for more information.</p>
+    <p>These third-party providers may collect limited technical parameters automatically when requests are made, such as your operating system build, device model, or anonymous advertising identifier (AAID).</p>
 
-        <h2>3. Log Data</h2>
-        <p>In case of app errors or crashes, GalAI may collect <strong>non-personal Log Data</strong> through third-party tools. This Log Data may include your device model, operating system version, app usage timestamps, and error diagnostics. This information is used solely to improve app stability, performance, and reliability.</p>
+    <h2>3. Children’s Privacy</h2>
+    <p>GalAI is a general utility tool designed for productivity and gallery management. It does not knowingly solicit or archive personal data from children under the age of 13. If any third-party framework logs telemetry metrics from an underage user, standard operating system ad-tracking limitations apply.</p>
 
-        <h2>4. Cookies</h2>
-        <p>GalAI does not use cookies directly. However, third-party libraries used in the app may use cookies or similar technologies to improve their services. Users can manage cookie preferences through their device settings.</p>
+    <h2>4. Data Retention and Deletion</h2>
+    <p>Because all gallery processing and AI indexing happen entirely on-device, we hold no user media or personal files on external servers. If you wish to wipe any application cache or local indexes, you can easily clear app data from your Android device settings or simply <strong>uninstall the application</strong>, which removes all local app artifacts instantly.</p>
 
-        <h2>5. App Features Disclaimer</h2>
-        <p>GalAI provides features such as offline AI gallery sorting, management, smart photo categorization, and cleanup assistance. All AI-generated groupings and suggestions are provided for <strong>organization, convenience, and assistance purposes only</strong>. We do not guarantee absolute accuracy in automated categorization. Users retain full control over their media and are responsible for any deletion, modification, or sharing of files within their gallery.</p>
+    <h2>5. Changes to This Privacy Policy</h2>
+    <p>We may update this policy periodically to reflect feature additions or adjustments to our storage architecture. Continued use of the app following updates signifies your acceptance of the revised policy terms.</p>
 
-        <h2>6. Security</h2>
-        <p>We value user trust and strive to protect the app using commercially acceptable security practices. Since GalAI performs image processing offline, your photos and personal media remain on your device. However, no method of electronic storage is 100% secure, and we cannot guarantee absolute security. For best security, users are advised to download the app only from the Google Play Store.</p>
+    <h2>6. Contact Us</h2>
+    <p>If you have any questions, security concerns, or compliance feedback regarding this Privacy Policy, please reach out to us directly at:</p>
+    <p style="text-align: center;"><strong>Email:</strong> chainscube@gmail.com</p>
 
-        <h2>7. Children’s Privacy</h2>
-        <p>GalAI does not target children under the age of 13. We do not knowingly collect personal information from children. If a parent or guardian believes that a child has provided personal information, please contact us and we will take appropriate action.</p>
+    <div class="footer-note">
+        Distributed by CubeChains Ecosystem © 2026. All Rights Reserved. All unique app code, layout styles, and "GalAI" branding are the exclusive property of the developer.
+    </div>
 
-        <h2>8. Data Retention and Deletion</h2>
-        <ul>
-            <li><strong>Data Retention:</strong> We do not store or retain any personal user data or media files on our servers. All gallery scanning and AI categorization processes are conducted locally on your device, and no personal data is persisted beyond your active session or local cache.</li>
-            <li><strong>Data Deletion:</strong> As we do not store or collect personal data on external servers, there is no requirement for a server-side data deletion request process. If you wish to clear any data or cache generated by the app, you may clear app data via your device settings or simply uninstall the application, which will remove all locally stored preferences from your device.</li>
-        </ul>
-
-        <h2>9. Changes to This Privacy Policy</h2>
-        <p>This Privacy Policy may be updated from time to time. Any changes will be posted on this page with an updated effective date. Users are encouraged to review this policy periodically.</p>
-
-        <div class="contact-card">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or suggestions regarding this Privacy Policy, please contact us at:</p>
-            <p><a href="mailto:chainscube@gmail.com" class="email-link">chainscube@gmail.com</a></p>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 CubeChains. All rights reserved.</p>
-    </footer>
-</div>
+</body>
+</html>
